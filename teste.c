@@ -1,23 +1,29 @@
 #include <stdio.h>
+#include <locale.h>
+#include <windows.h>
 
 int main(){
-int i;
-int valor[] = {10, 20, 32, 421, 21};
-int valor2[] = {5, 15, 25, 35, 45};
 
-    printf("\n");
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
+    setlocale(LC_ALL, "Portuguese");
 
-    for(i=0; i<5; i++){
-        printf("%d\n", valor[i]);
-    }
+int numero1, numero2;
 
-    printf("\n");
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &numero1);
 
-    for(i = 0; i<5; i++){
-        printf("%d\n", valor2[i]);
-    }
+    printf("Digite o segundo numero: ");
+    scanf("%d", &numero2);
 
-    printf("\n");
+if(numero1 > numero2){
+    printf("O numero %d é maior que o numero %d\n", numero1, numero2);
+} else if(numero2 > numero1) {
+    printf("O numero %d é maior que o numero %d\n", numero2, numero1);
+} else {
+   printf("Os numeros sao iguais.\n");
+}
+    printf("Fim do programa.");
 
-    return 0;
+return 0;
 }

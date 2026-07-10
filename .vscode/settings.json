@@ -1,3 +1,7 @@
 {
-    "C_Cpp.default.compilerPath": "gcc.exe"
+    "C_Cpp.default.compilerPath": "gcc.exe",
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    }
 }
